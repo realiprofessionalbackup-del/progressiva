@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Hero } from './components/Hero';
 import { Results } from './components/Results';
@@ -18,11 +17,11 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center">
+    <div className="min-h-screen flex flex-col items-center bg-black">
       {/* ProgressBar for engagement */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-stone-200 z-50">
+      <div className="fixed top-0 left-0 w-full h-1 bg-stone-900 z-50">
         <div 
-          className="h-full bg-stone-900 transition-all duration-300" 
+          className="h-full bg-emerald-500 transition-all duration-300 shadow-[0_0_10px_#10b981]" 
           style={{ width: `${Math.min(100, (scrolled ? 100 : 0))}%` }}
         />
       </div>
@@ -34,9 +33,9 @@ const App: React.FC = () => {
         <FinalOffer />
       </main>
 
-      <footer className="w-full py-12 bg-stone-900 text-stone-400 text-center text-sm px-6">
+      <footer className="w-full py-12 bg-stone-950 text-stone-500 text-center text-sm px-6 border-t border-stone-900">
         <p>&copy; {new Date().getFullYear()} Progressiva Orgânica Profissional. Todos os direitos reservados.</p>
-        <p className="mt-2 text-stone-600">Este produto é para uso externo. Siga as instruções de aplicação.</p>
+        <p className="mt-2 text-stone-700">Este produto é para uso externo. Siga as instruções de aplicação.</p>
       </footer>
 
       <FloatingWhatsApp />

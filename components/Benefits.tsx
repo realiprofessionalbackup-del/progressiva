@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Benefits: React.FC = () => {
@@ -9,19 +8,19 @@ export const Benefits: React.FC = () => {
   ];
 
   return (
-    <section className="px-6 py-16 bg-white rounded-[3rem] shadow-sm border border-stone-100 mx-6">
+    <section className="px-6 py-16 bg-stone-900/20 rounded-[3rem] shadow-sm border border-stone-800 mx-6 backdrop-blur-sm">
       <div className="max-w-xl mx-auto">
-        <h2 className="text-4xl font-bold text-stone-900 mb-12 text-center leading-tight">Para quem essa progressiva é ideal?</h2>
+        <h2 className="text-4xl font-bold text-white mb-12 text-center leading-tight">Para quem essa progressiva é ideal?</h2>
         
         <div className="space-y-10">
           {benefitsList.map((b, i) => (
             <div key={i} className="flex gap-6 group">
-              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-stone-900 flex items-center justify-center text-white font-bold transition-transform group-hover:rotate-6">
+              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-emerald-500 flex items-center justify-center text-black font-bold transition-transform group-hover:rotate-6 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-2 leading-snug">{b.title}</h3>
-                <p className="text-lg text-stone-600 leading-relaxed">{b.desc}</p>
+                <h3 className="text-2xl font-bold text-white mb-2 leading-snug">{b.title}</h3>
+                <p className="text-lg text-stone-400 leading-relaxed">{b.desc}</p>
               </div>
             </div>
           ))}
