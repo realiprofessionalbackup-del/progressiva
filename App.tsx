@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Hero } from './components/Hero';
 import { Results } from './components/Results';
 import { Benefits } from './components/Benefits';
+import { Composition } from './components/Composition';
+import { Guarantee } from './components/Guarantee';
+import { FAQ } from './components/FAQ';
 import { FinalOffer } from './components/FinalOffer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
@@ -30,12 +33,21 @@ const App: React.FC = () => {
         <Hero />
         <Results />
         <Benefits />
+        <Composition />
+        <Guarantee />
+        <FAQ />
         <FinalOffer />
       </main>
 
       <footer className="w-full py-12 bg-stone-950 text-stone-500 text-center text-sm px-6 border-t border-stone-900">
-        <p>&copy; {new Date().getFullYear()} Progressiva Orgânica Profissional. Todos os direitos reservados.</p>
-        <p className="mt-2 text-stone-700">Este produto é para uso externo. Siga as instruções de aplicação.</p>
+        <div className="flex flex-col gap-4">
+          <p>&copy; {new Date().getFullYear()} Progressiva Orgânica Profissional. Todos os direitos reservados.</p>
+          <div className="flex justify-center gap-6 text-stone-700">
+            <span className="hover:text-stone-500 cursor-pointer">Termos de Uso</span>
+            <span className="hover:text-stone-500 cursor-pointer">Políticas de Privacidade</span>
+          </div>
+          <p className="mt-2 text-stone-700">Este produto é para uso externo. Siga as instruções de aplicação.</p>
+        </div>
       </footer>
 
       <FloatingWhatsApp />

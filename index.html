@@ -42,11 +42,6 @@
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-10px); }
       }
-      /* Custom fluorescent dark green */
-      .bg-fluorescent-dark {
-        background-color: #0d2b1a; /* Very dark green */
-        border-color: #22c55e; /* Fluorescent border */
-      }
     </style>
   <script type="importmap">
 {
@@ -63,5 +58,7 @@
     src="https://www.facebook.com/tr?id=9570406026419007&ev=PageView&noscript=1"
     /></noscript>
     <div id="root"></div>
+    <!-- CRITICAL FIX: Load the React entry point -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
